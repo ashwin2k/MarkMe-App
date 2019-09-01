@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "197071396388",
+    "firebase_url": "https://mark-me-cebf5.firebaseio.com",
+    "project_id": "mark-me-cebf5",
+    "storage_bucket": "mark-me-cebf5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197071396388:android:67cc629a27e363ee",
+        "android_client_info": {
+          "package_name": "com.cloudsense.markme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "197071396388-2jucs5f84fm2ta8aokd28curgisfqsse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu0MUFlHh82apGeFkHpR_h6J1w6MteOfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "197071396388-2jucs5f84fm2ta8aokd28curgisfqsse.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

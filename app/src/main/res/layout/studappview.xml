@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/back_bg"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/blue_back"
+    android:fontFamily="sans-serif-light"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/main_content"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <TextView
+                android:textColor="#FFF"
+                android:text="June 5 2019,"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:id="@+id/dt"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextClock
+                android:textSize="25dp"
+                android:textColor="#FFF"
+                android:format12Hour="hh:mm:ss a"
+
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/dt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_below="@id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="30dp"
+            android:id="@+id/header"
+            android:layout_height="160dp">
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_below="@id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="30dp"
+            android:id="@+id/sneak"
+            android:paddingBottom="13dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Recent check-ins"
+                    android:textSize="21dp"
+                    android:id="@+id/rci"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:layout_below="@id/rci"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/rcp"
+                    android:layout_height="80dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_height="wrap_content"
+                        android:layout_width="70dp"
+                        android:src="@drawable/pro_2"
+                        />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image2"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:layout_marginLeft="6dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="70dp"
+                        android:src="@drawable/pro_1"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/profile_image2"
+                        android:text="+3 more"
+                        android:textSize="19dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap or scan QR Code"
+                    android:textSize="14dp"
+                    android:id="@+id/tt"
+
+                    android:layout_below="@id/rcp"
+                    android:layout_centerHorizontal="true"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:text="SCAN"
+                    android:textColor="#FFF"
+                    android:id="@+id/qqq"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tt"
+                    app:cornerRadius="20dp"
+                    android:background="#1976DB"
+                    android:elevation="10dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/holder"
+            app:cardCornerRadius="20dp"
+            android:layout_below="@id/header"
+            android:layout_marginTop="60dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignStart="@+id/holder">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="Good Morning!"
+                    android:textColor="#525050"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <pl.pawelkleczkowski.customgauge.CustomGauge
+                    android:id="@+id/gauge2"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    app:gaugeEndValue="100"
+                    app:gaugePointEndColor="#007DD6"
+                    app:gaugePointStartColor="#007DD6"
+                    app:gaugeStartAngle="135"
+                    app:gaugeStartValue="0"
+                    app:gaugeStrokeCap="ROUND"
+                    app:gaugeStrokeColor="#B9B4B4"
+                    app:gaugeStrokeWidth="10dp"
+                    app:gaugeSweepAngle="270" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="45"
+                        android:textColor="#525050"
+                        android:textSize="60dp" />
+
+                    <TextView
+                        android:id="@+id/min"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/time"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="0dp"
+                        android:text="minutes"
+                        android:textColor="#525050"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gauge2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:text="More to register your attendance"
+                    android:textColor="#525050"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:foreground="?android:selectableItemBackground"
+                    android:text="@string/view_attendance_stats"
+                    android:textAllCaps="false"
+                    android:textColor="#525050"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

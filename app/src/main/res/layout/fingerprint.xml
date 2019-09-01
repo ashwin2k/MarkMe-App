@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_g"
+    android:layout_width="280dp"
+    android:padding="20dp"
+    android:layout_height="280dp">
+    <TextView
+        android:text="Verify with fingerprint"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:textColor="#2C2C2C"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_centerVertical="true"
+        android:paddingTop="30dp"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_url="https://assets9.lottiefiles.com/datafiles/9Nu3WJLydErNDKf/data.json"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

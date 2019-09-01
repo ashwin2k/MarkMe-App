@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/blue_back"
+    android:id="@+id/scroll"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 Jun 2019"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#FFF"
+                android:textSize="25dp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:id="@+id/dt_cont"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:id="@+id/present"
+        android:layout_below="@id/dt_cont"
+        app:cardCornerRadius="15dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attendance Count"
+            android:textSize="25dp"
+            android:id="@+id/pres"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#464545" />
+            <pl.pawelkleczkowski.customgauge.CustomGauge
+                android:id="@+id/present_count"
+                android:layout_marginTop="60dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_below="@id/pres"
+                android:paddingTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                app:gaugePointEndColor="#007DD6"
+                app:gaugePointStartColor="#007DD6"
+                app:gaugeStartAngle="135"
+                app:gaugeStartValue="0"
+
+                app:gaugeStrokeCap="ROUND"
+                app:gaugeStrokeColor="#B8B5B5"
+                app:gaugeStrokeWidth="10dp"
+                app:gaugeSweepAngle="270" />
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#464545"
+                    android:id="@+id/pres_no"
+                    android:textSize="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45" />
+                <TextView
+                    android:textColor="#464545"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="0dp"
+                    android:id="@+id/pres_tot"
+                    android:text="out of 75"
+                    android:layout_below="@id/pres_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_below="@id/present"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/grph"
+        android:layout_height="400dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turnover"
+                android:textSize="25dp"
+                android:id="@+id/comp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#464545" />
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_width="match_parent"
+                android:id="@+id/max"
+                android:layout_below="@id/comp"
+                android:layout_margin="10dp"
+                android:layout_height="350dp"/>
+            
+            </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/grph"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/rt"
+        android:layout_height="400dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Students Present"
+            android:textSize="25dp"
+            android:id="@+id/studpres"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#464545" />
+        <ListView
+            android:layout_below="@id/studpres"
+            android:layout_margin="10dp"
+            android:id="@+id/pres_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

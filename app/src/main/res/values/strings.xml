@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mark Me!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="view_attendance_stats"><u>View Attendance Stats</u></string>
+</resources>

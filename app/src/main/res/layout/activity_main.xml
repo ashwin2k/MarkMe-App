@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/back_bg"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/blue_back"
+    android:fontFamily="sans-serif-light"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/main_content"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <TextView
+                android:textColor="#FFF"
+                android:text="June 5 2019,"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:id="@+id/dt"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextClock
+                android:textSize="25dp"
+                android:textColor="#FFF"
+                android:format12Hour="hh:mm:ss a"
+
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/dt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_below="@id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="30dp"
+            android:id="@+id/header"
+            android:layout_height="160dp">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/connectivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/online"
+                    android:layout_width="18dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/summary1"
+                    android:layout_height="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:id="@+id/summary1"
+            android:textSize="18dp"
+            android:textColor="#525050"
+            android:textStyle="bold"
+            android:foreground="?android:selectableItemBackground"
+            android:text="Connected to Firebase™ Cloud"
+            android:fontFamily="sans-serif-light"
+            />
+                    <TextView
+                        android:layout_below="@id/summary1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Scan your card here"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/connectivity"
+        >
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_marginTop="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:id="@+id/nf"
+        app:lottie_url="https://assets10.lottiefiles.com/temp/lf20_hs090k.json"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+        <com.airbnb.lottie.LottieAnimationView
+                    android:layout_marginTop="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    android:layout_toRightOf="@id/nf"
+            android:id="@+id/student_ed"
+                    app:lottie_url="https://assets6.lottiefiles.com/temp/lf20_PFb8HA.json"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+    </RelativeLayout>
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_below="@id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="30dp"
+            android:id="@+id/sneak"
+            android:layout_height="160dp">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Recent check-ins"
+                        android:textSize="21dp"
+                        android:id="@+id/rci"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:layout_below="@id/rci"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_height="wrap_content"
+                        android:layout_width="70dp"
+                        android:src="@drawable/pro_2"
+                        />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image2"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:layout_marginLeft="6dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="70dp"
+                        android:src="@drawable/pro_1"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/profile_image2"
+                        android:text="+3 more"
+                        android:textSize="19dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/holder"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good Morning!"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textColor="#525050"
+                android:textStyle="bold"
+                android:textSize="30dp"/>
+    <pl.pawelkleczkowski.customgauge.CustomGauge
+        android:id="@+id/gauge2"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:gaugeEndValue="100"
+        app:gaugePointEndColor="#007DD6"
+        app:gaugePointStartColor="#007DD6"
+        app:gaugeStartAngle="135"
+        app:gaugeStartValue="0"
+        app:gaugeStrokeCap="ROUND"
+        app:gaugeStrokeColor="#B9B4B4"
+        app:gaugeStrokeWidth="10dp"
+        app:gaugeSweepAngle="270" />
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:textColor="#525050"
+
+        android:id="@+id/time"
+        android:textSize="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="45" />
+        <TextView
+            android:textColor="#525050"
+
+            android:layout_centerHorizontal="true"
+            android:layout_margin="0dp"
+            android:text="minutes"
+            android:id="@+id/min"
+            android:textStyle="bold"
+            android:layout_below="@id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:textColor="#525050"
+                android:textSize="15dp"
+                android:layout_below="@id/gauge2"
+                android:text="More to register your attendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/summary"
+                android:textSize="18dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="#525050"
+                android:textStyle="bold"
+                android:foreground="?android:selectableItemBackground"
+                android:text="@string/view_attendance_stats"
+                android:fontFamily="sans-serif-light"
+                />
+
+
+        </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
