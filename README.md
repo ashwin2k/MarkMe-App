@@ -25,6 +25,9 @@ An intelligent AI-based attendance system that can record attendance with face r
 3) BootStrap
 4) Java
 
+## To run the app
+Clone the project and build the apk using Android Studio!
+
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/42934189/215978968-9b14ba30-77d6-41fa-94fd-d0eb5a67e691.png)
 ![image](https://user-images.githubusercontent.com/42934189/215979020-6d626a7b-486b-4abb-913e-639763cf9f34.png)
